@@ -1,10 +1,13 @@
-package com.BridgeLabz;
+package com.bridgelabz;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class AddressBook
 {
     Contact contact = new Contact();  //Association formed
+    ArrayList<Contact>  contactStore = new ArrayList<>();
+
 
 
     public void addContact() {
@@ -42,6 +45,28 @@ public class AddressBook
         contact.setZipCode(zipCode);
         contact.setPhoneNumber(phoneNumber);
         contact.setEmail(email);
+        contactStore.add(contact);
 
     }
+
+
+
+
+
+
+
+    public void editContact() {
+        Scanner sc = new Scanner(System.in);
+        String searchContact = sc.next();
+        if (contact.equals(searchContact)) {
+            contact.setFirstName(searchContact);
+            contact.getFirstName();
+
+
+        }
+
+    }
+
+
+
 }

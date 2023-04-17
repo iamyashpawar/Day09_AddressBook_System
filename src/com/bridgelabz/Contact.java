@@ -1,4 +1,6 @@
-package com.BridgeLabz;
+package com.bridgelabz;
+
+import java.util.Objects;
 
 public class Contact
 {
@@ -91,4 +93,30 @@ public class Contact
     public void setEmail(String email) {
         this.email = email;
     }
+
+
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Contact contact = (Contact) o;
+        return Objects.equals(firstName, contact.firstName) && Objects.equals(lastName, contact.lastName) && Objects.equals(address, contact.address) && Objects.equals(cityName, contact.cityName) && Objects.equals(stateName, contact.stateName) && Objects.equals(zipCode, contact.zipCode) && Objects.equals(phoneNumber, contact.phoneNumber) && Objects.equals(email, contact.email);
+    }
+
+    @Override
+    public String toString() {
+        return "Contact{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", address='" + address + '\'' +
+                ", cityName='" + cityName + '\'' +
+                ", stateName='" + stateName + '\'' +
+                ", zipCode='" + zipCode + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
 }
+
