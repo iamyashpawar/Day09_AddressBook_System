@@ -68,5 +68,29 @@ public class AddressBook
     }
 
 
+    public void deleteContact() {
+        Scanner sc = new Scanner(System.in);
+        String deleteContactName = sc.next();
+        if (contact.equals(deleteContactName))
+        {
+            contact.setFirstName("");
+            contact.setLastName("");
+            contact.setCityName("");
+            contact.setEmail("");
+            contact.setPhoneNumber("");
+            contact.setZipCode("");
+            contact.setStateName("");
+
+        }else
+        {
+            System.out.println("Contact not found");
+        }
+
+
+
+
+    }
+
+
 
 }
