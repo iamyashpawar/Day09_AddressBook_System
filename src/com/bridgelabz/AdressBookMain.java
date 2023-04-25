@@ -8,7 +8,7 @@ public class AdressBookMain
     {
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter Option 1 for add contact & 2 for edit contact");
+        System.out.println("Enter Option 1 for add contact , 2 for edit contact & 3 for delete contact");
 
         int selectOption =sc.nextInt();
 
@@ -22,7 +22,7 @@ public class AdressBookMain
                 addressBook1.addContact();
             }
             case 2 -> {
-                System.out.println("Yo to edit Contact");
+                System.out.println("edit Contact");
                 addressBook1.editContact();
                 System.out.println("Enter Your Options:");
                 System.out.println("First Name");
@@ -31,9 +31,13 @@ public class AdressBookMain
                 System.out.println("City");
                 System.out.println("State");
                 System.out.println("Zip");
-                System.out.println("7.Phone Number");
+                System.out.println("Phone Number");
                 System.out.println("email Id");
                 int temp = sc.nextInt();
+            }
+
+            case    3 -> {
+                addressBook1.deleteContact();
             }
             default -> System.out.println("You Select exit");
         }
